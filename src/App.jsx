@@ -24,7 +24,7 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            isDesktop: window.outerWidth > 1200,
+            isDesktop: window.outerWidth > 1000,
         };
     }
     render() {

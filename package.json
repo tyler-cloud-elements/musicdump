@@ -16,7 +16,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "publish-now": "now rm musicdump; now; now alias musicdump"
   },
   "author": "tyltot",
   "license": "MIT"

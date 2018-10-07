@@ -9,16 +9,19 @@ const CardWrapper = styled.div`
   align-items: center;
   border: 1px solid darkgray;
   height: 260px;
-  width: 260px;
-  padding: 5px;
-  margin: 10px;
+  width: ${props => props.isDesktop ? '260px' : 'inherit'};
+  padding-top: 5px;
+  margin-top: 10px;
+  margin-left: ${props => props.isDesktop ? '10px': '0px'};
+  /* margin-right: ${props => props.isDesktop ? '10px': '0px'}; */
+  background-color: white;
 `;
 
 class Card extends Component {
   render() {
-    const { title, url, playing, loop, volume, controls, muted, width, height } = this.props;
+    const { isDesktop, title, url, playing, loop, volume, controls, muted, width, height } = this.props;
     return (
-      <CardWrapper>
+      <CardWrapper isDesktop={isDesktop}>
         <h3>{title}</h3>
         <ReactPlayer
           url={url}
@@ -27,7 +30,7 @@ class Card extends Component {
           controls={controls}
           volume={volume}
           muted={muted}
-          width={width}
+          width='100%'
           height={height}
         />
       </CardWrapper>

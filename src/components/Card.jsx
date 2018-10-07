@@ -13,7 +13,6 @@ const CardWrapper = styled.div`
   padding-top: 5px;
   margin-top: 10px;
   margin-left: ${props => props.isDesktop ? '10px': '0px'};
-  /* margin-right: ${props => props.isDesktop ? '10px': '0px'}; */
   background-color: white;
 `;
 
@@ -30,7 +29,7 @@ class Card extends Component {
           controls={controls}
           volume={volume}
           muted={muted}
-          width='100%'
+          width={width}
           height={height}
         />
       </CardWrapper>
@@ -54,7 +53,7 @@ Card.defaultProps = {
   controls: true,
   volume: 1,
   muted: false,
-  width: 240,
+  width: '100%',
   height: 200
 }
 
